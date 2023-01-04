@@ -52,23 +52,6 @@ class EmbeddingNet(torch.nn.Module):
 		return pre_score, gt_score
 
 
-# class RankingScoreNet(torch.nn.Module):
-# 	def __init__(self, feature_length):
-# 		super(RankingScoreNet, self).__init__()
-# 		self.fc = torch.nn.Sequential(
-# 			torch.nn.Linear(feature_length * 2, feature_length),
-# 			torch.nn.ReLU(),
-# 			torch.nn.Linear(feature_length, 1),
-# 			# torch.nn.ReLU(),
-# 			# torch.nn.Linear(32, 1)
-# 			)
-# 		# self.fc = torch.nn.Linear(feature_length * 2, 1, bias=False)
-# 		# self.fc = torch.nn.Linear(feature_length * 2, 1)
-
-# 	def forward(self, A2CF_u_i_embedding):
-# 		out = self.fc(A2CF_u_i_embedding)
-# 		return out
-
 class RankingScoreNet(torch.nn.Module):
 	def __init__(self, feature_length):
 		super(RankingScoreNet, self).__init__()

@@ -240,10 +240,6 @@ class Engine(object):
 
 		return full_ranklist
 
-
-
-
-
 	def output_item_scores(self, test_loader, interact_hist, item_pool):
 		self.model.cpu()
 		self.model.eval()
